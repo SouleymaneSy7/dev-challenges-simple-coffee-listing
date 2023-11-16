@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}" target="_blank">
+    <a href="https://dev-challenges-simple-coffee-listing.vercel.app/" target="_blank">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}" target="_blank">
+    <a href="https://devchallenges.io/solution/2856" target="_blank">
       Solution
     </a>
     <span> | </span>
