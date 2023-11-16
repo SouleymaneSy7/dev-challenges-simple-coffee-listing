@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --main-bg-clr: hsl(210, 7%, 11%);
+  --body-bg-clr: hsl(210, 11%, 7%);
+  --body-text-clr: hsl(212, 6%, 46%);
+  --price-bg-clr: hsl(143, 40%, 82%);
+  --heading-text-clr: hsl(34, 89%, 96%);
+  --tag-bg-clr: hsl(40, 89%, 69%);
+  --sold-out-text-clr: hsl(9, 80%, 65%);
+
+  /* Fonts */
+  --font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--body-text-clr);
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--body-bg-clr);
+  min-height: 100vh;
+
+  padding-inline: 1.25rem;
+  padding-block-start: 6.25rem;
+  padding-block-end: 3rem;
+}
+
+body::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+
+  display: inline-block;
+
+  width: 100%;
+  height: 18.75rem;
+
+  background-image: url("./assets/bg-cafe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.card-container {
+  --card-max-width: 16.25rem;
+  --card-container: 54.375rem;
+
+  width: min(100%, var(--card-container));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--card-max-width)), 1fr)
+  );
+  justify-items: center;
+  gap: 1.25rem;
+}
+
+@media only screen and (min-width: 80em) {
+  .card-container {
+    gap: 1.5rem;
+  }
+}
